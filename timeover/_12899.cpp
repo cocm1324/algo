@@ -66,12 +66,13 @@ void min_heap_push(vector<int> &v, int value) {
 }
 
 int min_heap_pop(vector<int> &v) {
-    int value = v[1];
+    int value;
     int pos = 1;
     int temp = 0;
     vector<int>::iterator it = v.begin();
 
     v.erase(v.begin());
+    value = v.front();
     v.erase(v.begin());
     v.insert(v.begin(), -1);
 
